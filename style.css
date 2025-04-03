@@ -1,0 +1,755 @@
+/* ========================= */
+/* START - Style CSS file    */
+/* ========================= */
+
+/* Setting up CSS variables for colors used throughout the site */
+
+ :root {
+	/* Background Colours */
+	--primary-colour:#1E1E1E;
+	--secondary-colour:#2a2a2a;
+	--opacity-colour:rgba(0, 0, 0, 0.5);
+
+	/* Font colours */
+	--primary-font-color:white;
+	--secondary-font-color:#D1D5DB;
+
+	/* Buttons Colours */
+	--primary-buttons-color:#ff4400;
+	--font-buttons-color:#4B5563;
+
+	/*Input Colours */
+	--primary-input-color:rgb(245, 245, 245);
+
+	/* Hover Colors Effects */
+	--primary-hover-color:#b82b2b;
+
+}
+
+/* Default styles applied to all elements for consistency */
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family:"Poppins",serif;
+	font-size:16px;
+	border: none;
+	text-decoration: none;
+	transition: opacity 0.5s ease-in-out;
+} 
+
+/* Base styles for the HTML and body */
+html {
+	width: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+/* Main page body styling */
+.body-main,
+.body-aboutUs,
+.body-bands {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	background-color:var(--primary-colour);
+}
+
+.body-aboutUs {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Special height adjustment for the main page */
+.body-main {
+	height: 400vh;
+}
+
+/* ========================= */
+/* START - Home Page Styles  */
+/* ========================= */
+
+/*It sets style to the top bar, main container, gallery and footer sections. */
+
+/* Top and Nav Bar */
+
+.top-bar,
+.nav-bar,
+.top-bar .btn-register {
+	display:flex;
+}
+
+.top-bar {
+	position: fixed;
+	max-width: 100%;
+	min-width: 100%;
+	justify-content: space-evenly;
+	background-color: var(--secondary-colour) ;
+	z-index: 50;
+}
+
+/* Logo positioning */
+.top-bar-logo {
+	margin: 10px 20px 10px 20px;
+	
+}
+.top-bar-logo label {
+	color: var(--primary-font-color);
+	font-weight: 700;
+	font-size: 1em;
+}
+
+/* Registration button styles */
+.top-bar .btn-register {
+	justify-content: space-between;
+	padding: 5px 20px 5px 20px;
+	color:var(--primary-buttons-color);
+}
+.nav-bar {
+	justify-content: space-around;
+	flex-direction: row;
+	color:var(--primary-font-color);
+	padding: 10px 0px 0px 30px;
+	border-radius:5px;
+}
+.nav-bar li {
+	display: inline;
+	text-decoration: none;
+	margin-right: 30px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.nav-bar a:visited {
+	color:var(--secondary-font-color);
+}
+
+
+.top-bar .btn-register input {
+	width: 80px;
+	height: 30px;
+	border-radius: 10px;
+	border: none;
+	margin:3px;
+	background-color: var(--primary-input-color);
+	cursor: pointer;
+}
+
+/* Navbar hover effects */
+.nav-bar li:hover, .nav-bar input[type="button"]:hover {
+	background-color: var(--primary-buttons-color);
+	border-radius: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Main Container */
+.title-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 30%;
+	margin-bottom:20px;
+	background-image: url(../images/radio.jpg); /* Uzzaman, Shakib. 2023. A black and white photo of an old radio. Available at: https://unsplash.com/photos/a-black-and-white-photo-of-an-old-radio-yz2SzN6KDEA */
+	background-size:cover;
+	background-position: left;
+	filter: contrast(140%);
+	
+
+}
+
+
+.title-container h1 {
+	font-size: 3em;
+	color: var(--primary-font-color);
+	
+}
+
+.title-container h2 {
+	font-size:1.5em;
+	font-weight: 100;
+	color: var(--primary-font-color);
+	
+}
+
+/* Content section */ 
+
+.section-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width:100%;
+	height: 15%;
+	align-items: center;
+	text-align: center;
+	margin: 20px 0 30px 0;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(313deg, rgb(0, 0, 0) 0%, rgba(0,0,0,1) 34%, rgba(64,64,64,1) 100%);
+
+}
+
+.section-card {
+	color: var(--primary-font-color);
+	font-weight: 200;
+	opacity: 0.5;
+}
+
+.section-container > * {
+	max-width: 20%;
+	max-height: 100%;
+
+}
+
+.section-card:nth-child(1){
+	text-align: end;
+}
+
+.section-card:nth-child(3){
+	text-align: start;
+}
+
+.section-container>*:hover {
+	transition: 0.2s ease-in-out;
+	font-weight: 350;
+	opacity: 1;
+
+}
+
+/* Section Mosaic highlights */
+
+.mosaic-section {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 43%;
+
+}
+
+.mosaic-section .mosaic-cards {
+	display: flex;
+	flex-direction: column;
+	max-width: 33.3%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.mosaic-section .mosaic-cards img {
+	display: block;
+	transition: transform 0.3s ease-in-out; 
+	filter: contrast(120%);
+	width: 100%;
+}
+
+.mosaic-section .mosaic-cards img:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/* =========================*/
+/* General Footer Styles    */
+/* =========================*/
+
+.footer {
+	width: 100%;
+    background: var(--secondary-colour);
+    color: var(--primary-font-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+	margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-font-color);
+}
+
+/* Contact table Style */
+
+.footer-contact-table-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	width: 70%;
+	height: 10%;
+	margin:20px;
+	border-radius: 5px;
+}
+.footer-contact-table-section h2 {
+	width: 100%;
+	color: var(--primary-font-color);
+}
+
+.footer-contact-table-section table {
+	margin:0;
+
+}
+.footer-contact-table-section table td{
+	padding: 10px;
+	padding-inline: 20px;
+	border-collapse: collapse;
+	
+}
+.footer-contact-table-section table th {
+	color: var(--primary-font-color);
+}
+
+
+/* Home Page (index.html) - END STYLE */
+
+
+/* ========================= */
+/* START -Band Page Styles   */
+/* ========================= */
+
+
+/* Filter Section for selecting bands */
+
+.music-topic {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content:start;	
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 90%;
+	margin:10px;
+	padding: 5px;
+	background: linear-gradient(180deg, rgba(94, 94, 94, 0.6) 0%, rgba(125,125,125,0) 100%);
+	border-radius: 15px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	
+}
+
+.music-img-container {
+	display: flex;
+	grid-area: filter;
+	padding:5px;
+	width: 100%;
+	height:90%;
+	border-radius: 40px;
+	margin:0 0 20px 0;
+
+}
+
+.music-img-container span {
+	color: var(--primary-font-color);
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.music-img-container img {
+	max-width: 100%;
+	max-height: 50%;
+	border-radius: 15px;
+	margin-bottom:15px;
+}
+
+.music-list-container {
+	display: grid;
+	width: 90%;
+	height: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+		"filter filter"
+		"history table"
+		"albums table";
+	padding:10px;
+	margin-bottom: 20px;
+	border-radius: 0 0 20px 20px;
+	margin-top:30px;
+}
+
+.music-list-container>* {
+	padding:5px;
+}
+
+.music-topic:hover{
+	background: linear-gradient(180deg, var(--primary-hover-color) 0%, rgba(125,125,125,0.1) 100%);
+	cursor: pointer;
+	transition: 0.1s ease;
+	transform: scale(1.1);
+}
+
+/* Band History Section */
+
+.history-container {
+	grid-area: history;
+	color:var(--primary-font-color);
+	font-weight: 200;
+	font-size: 1em;
+	width: 100%;
+	height: 100%;
+	padding:5px 20px 0 20px;
+	margin: 0 0 10px 0;
+	border-radius: 15px;	
+}
+
+.history-container p {
+	font-size: 0.9em;
+	text-align: justify;
+}
+
+.history-container h1#band-title {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+/* Albums section */
+
+.albums-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	height: 80%;
+	grid-area: albums;
+	border-radius: 15px;
+	margin: 10px 0 0 0;
+	color:var(--primary-font-color);
+	
+}
+
+/* Album box for displaying album covers */
+
+.album-box {
+	width: 31%;
+	height: 100%;
+	float: left;
+	padding:10px;
+	margin:5px;
+	border-radius: 15px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	background: linear-gradient(180deg, rgba(81, 81, 81, 0.6) 0%, rgba(125,125,125,0.1) 100%);
+}
+
+.album-box p {
+	font-size: 0.6em;
+	font-weight: 200;
+	text-align: left;
+}
+
+.albums-container img {
+	width: 45%;
+	height: 30%;
+	border-radius:10px;
+}
+
+.album-box:hover {
+	background: linear-gradient(180deg, var(--primary-hover-color) 0%, rgba(125,125,125,0.1) 100%);
+	cursor: pointer;
+	transition: 0.1s ease;
+	transform: scale(1.05);
+}
+
+/* Table section for displaying music recorded */
+
+.music-table-container {
+	grid-area: table;
+	height: 100%;
+	width: 100%;
+	margin:0 0 0 5px;
+	text-align: center;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border-radius: 20px;
+}
+
+.music-list-container h2 {
+	color: var(--primary-font-color);
+	font-size: 1.5em;
+	width: 100%;
+	text-align: center;
+}
+
+.music-table-container table {	
+	display: flex;
+	height: 100%;
+	width: auto;
+	color: white;
+	text-align: center;
+	border-radius: 25px;
+	overflow-y:hidden;
+	
+}
+
+.music-table-container table th:nth-child(5) {
+	border-top-right-radius: 20px;
+}
+
+.music-table-container table th:nth-child(1){
+	border-top-left-radius: 20px;
+}
+
+.music-table-container table tr {
+    height: 50px;
+	font-size: 1em;
+	height: 0.2em;
+
+}
+
+.music-table-container table tbody::-webkit-scrollbar, 
+.music-table-container table ::-webkit-scrollbar {
+	display: none;
+}
+
+.music-table-container table tbody {
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-radius:30px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	height: 422px;
+}
+
+.music-table-container table th {
+	position: sticky;
+	top:0;
+	background: rgba(94, 94, 94);
+	padding-inline: 30px;
+	color: var(--primary-font-color);
+	width: 100%;
+	font-size: 1em;
+	vertical-align:center;
+	z-index: 10;
+	
+}
+
+.music-table-container table td {
+	font-size: 0.9em;
+	padding-inline-start: 20px;
+	padding-inline-end: 20px;
+	
+}
+
+.music-table-container table tr:hover>*:not(th){
+	background-color: var(--primary-font-color);
+	color: var(--primary-colour);
+	cursor:pointer;
+	opacity: 0.6;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery Section for displaying marketing texts*/
+
+.gallery-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--primary-font-color);
+	background-size: cover;
+}
+
+.gallery-card {
+	width: 100%;
+	height: 100%;
+	padding:10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+	background-color: var(--primary-colour);
+	
+}
+
+.gallery-card p {
+	margin: 50px;
+	justify-content:center;
+	font-weight: 100;
+	font-size: 20pt;
+	visibility: hidden;
+	animation: fadeCycle 20s infinite ease;
+}
+
+.gallery-card p a {
+	text-decoration: none;
+	color: var(--filter-hover);
+	font-weight: 500;
+	font-size: 20pt;
+}
+
+.gallery-card #gallery_text1 {
+	grid-area:txtop;
+}
+
+.gallery-card img {
+	width: 50%;
+	height: 100%;
+	border-radius: 25px;
+	display: none;
+}
+
+/* Bands Page (bands.html) - END STYLE */
+
+/* Contact Us Page Style for displaying about us text and contact us form */
+
+.contactUs-main-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	background-image: url(../images/background1.jpg); /* Ervi, Sebastian. 2019.Rock band on Stage. Available at: https://unsplash.com/photos/rock-band-on-stage-uCZVEo8iT9Q */
+	background-size: cover;
+
+}
+
+.contactUs-main-container {
+	padding:20px;
+}
+
+.aboutUs-box {
+	width: 50%;
+	height: 50%;
+	margin: 0 20px 20px 20px;
+	padding:20px;
+	font-weight: 200;
+	border-radius: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	background-color: var(--opacity-colour);
+	color: var(--primary-font-color);
+}
+
+
+.contactUs-main-container p{
+	text-align: justify;
+	font-size: 14pt;
+}
+
+.contactUs-main-container h1, 
+.contactUs-main-container h2 {
+	text-align: center;
+	font-size: 20pt;
+	padding-top: 10px;
+}
+
+.form-box {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	height: auto;
+	padding: 0 20px 20px 20px;
+	justify-content: center;
+	border-radius: 20px;
+	margin: 30px 10px 10px 10px;
+	color:var(--primary-font-color);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	background-color: var(--opacity-colour);
+
+}
+.form-box>* {
+	margin:2px;
+}
+
+.form-box input, .form-box textarea, .form-box select {
+	border:1px solid rgba(255, 255, 255, 0.1);
+	background-color: var(--primary-input-color);
+	border-radius: 7px;
+	color: var(--primary-colour);
+	overflow: hidden;
+}
+
+.form-box span > *
+{
+	display: inline-block;
+	margin: 5px;
+}
+
+.form-box textarea {
+	height: 70px;
+	margin-bottom: 5px;
+	resize: none;
+}
+
+.form-box input[type="submit"] {
+	background-color: var(--primary-buttons-color);
+	color: var(--primary-font-color);
+}
+
+
+/* Animation and keyframes effects */
+
+.gallery-card p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.gallery-card p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.gallery-card p:nth-child(3) {
+    animation-delay: 10s;
+}
+.gallery-card p:nth-child(4) {
+    animation-delay: 15s;
+}
+
+/* Fade effect for displaying marketing texts in gallery section */
+
+@keyframes fadeCycle {
+    0% { 
+		opacity: 0;
+	}
+    10% { 
+		opacity: 1;
+		visibility:visible;
+	}  
+    30% { 
+		opacity: 1;
+	}  
+    40% { 
+		opacity: 0;
+		visibility:hidden;
+	}  
+	
+    100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+
+
