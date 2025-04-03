@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="./assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="./assets/scripts/index.js"></script>
+    <title>Bands</title>
+</head>
+<body class="body-bands">
+    <div class="top-bar">
+        <div class="top-bar-logo">
+            <label>SoundEra</label>
+        </div>
+        <!-- This is the logo section -->
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bands.html">Bands</a></li>
+                    <li><a href="contactUs.html">Contact us</a></li>
+                </ul>			
+            </nav>
+        </div>
+        <!-- These are the navbar and navigation list -->
+        <div class="btn-register">
+            <input type="button" value="Register" id="btn-register">
+            <input type="button" value="Sign in" id="btn-login">
+        </div>
+        <!-- These are the login and register buttons -->
+    </div>
+    <div class="music-list-container">
+    <div class="music-img-container">
+        <div class="music-topic" onclick="filterByBand('AC/DC')">
+            <img src="./assets/images/acdc.jpg" alt="This is a picture of the selected band">
+            <span>AC/DC</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('Depeche Mode')">
+            <img src="./assets/images/depeche-mode.jpg" alt="This is a picture of the band Depeche Mode" >
+            <span>Despeche Mode</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('Duran Duran')">
+            <img src="./assets/images/duran-duran.jpg" alt="This is a picture of the band Duran Duran" >
+            <span>Duran Duran</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand(`Guns N' Roses`)">
+            <img src="./assets/images/guns-n-roses.jpg" alt="This is a picture of the band Guns N'Roses">
+            <span>Guns n'Roses</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('Journey')">
+            <img src="./assets/images/journey.jpg" alt="This is a picture of the band Journey" >
+            <span>Journey</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('Red Hot Chili Peppers')">
+            <img src="./assets/images/rhcp-2.jpg" alt="This is a picture of the band Red Hot Chili Peppers">
+            <span>RHCP</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('The Cure')">
+            <img src="./assets/images/the-cure.jpg" alt="This is a picture of the band The Cure">
+            <span>The Cure</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('The Police')">
+            <img src="./assets/images/the-police.jpg" alt="This is a picture of the band The Police" >
+            <span>The Police</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('The Smiths')">
+            <img src="./assets/images/the-smiths.jpg" alt="This is a picture of the band The Smiths" >
+            <span>The Smiths</span>
+        </div>
+        <div class="music-topic" onclick="filterByBand('U2')">
+            <img src="./assets/images/U2.jpg" alt="This is a picture of the band U2" >
+            <span>U2</span>
+        </div>
+    </div>
+        <div class="history-container">
+            <h1 id="band-title">ARTIST</h1>
+            <p id="band-history"></p>
+        </div>
+        <div class="music-table-container">
+            <h2>RECORDED SONGS</h2>
+            <table id="songs-list">
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <th>Writer</th>
+                        <th>Original Release</th>
+                        <th>Year</th>
+                        <th>Artist</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="albums-container">
+            <div class="album-container">
+                <h2>ALBUMS</h2>
+                <div class="album-box">
+                    <img src="./assets/images/acdc.jpg" class="album-picture" alt="This is the over of the album of the band.">
+                    <h3 class="album-title">""</h3>
+                    <p class="release-date">""</p>
+                    <p class="recorded">""</p>
+                    <p class="studio">""</p>
+                    <p class="length">""</p>
+                    <p class="label">""</p>
+                    <p class="producer">""</p>       
+                </div>
+                <div class="album-box">
+                    <img src="./assets/images/acdc.jpg" alt="This is the cover of the album of the band.">
+                    <h3 class="album-title">""</h3>
+                    <p class="release-date">""</p>
+                    <p class="recorded">""</p>
+                    <p class="studio">""</p>
+                    <p class="length">""</p>
+                    <p class="label">""</p>
+                    <p class="producer">""</p>       
+                </div>
+                <div class="album-box">
+                    <img src="./assets/images/acdc.jpg" alt="This is the cover of the album of the band.">
+                    <h3 class="album-title">""</h3>
+                    <p class="release-date">""</p>
+                    <p class="recorded">""</p>
+                    <p class="studio">""</p>
+                    <p class="length">""</p>
+                    <p class="label">""</p>
+                    <p class="producer">""</p>       
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the filter section where the user can choose which band they would like to read about -->
+    <div class="gallery-container">
+        <div class="gallery-card">
+            <p>Looking for the hottest bands that ruled the 80s and 90s? SoundEra has got you covered!</p>
+            <p>Dive into the most iconic albums and tracks that shaped a generation - all in one place.</p>
+            <p>Didn't find your favorite band? No worries! Just drop us a suggestion on our <a href="contactus.html">Contact us</a> page, and we'll make sure they join the lineup. Get ready to relive the golden era of music and vibe with your friends like never before!</p>
+            <p>SoundEra: Your Music. Your Era.</p>
+        </div>
+	</div>
+    <!-- This is the marketing section with paragraphs moving in transition -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+			<div class="footer-contact-table-section">
+				<table>
+					<thead>
+						<tr>
+							<th>SoundEra</th>
+							<th>Marketing Team</th>
+							<th>Sales Team</th>
+							<th>Phone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SoundEra Ireland</td>
+							<td>contactus@soundera.ie</td>
+							<td>suport@soundera.ie</td>
+							<td>(+353) 99999-9999</td>
+						</tr>
+						<tr>
+							<td>SoundEra UK</td>
+							<td>info@soundera.uk</td>
+							<td>help@soundera.uk</td>
+							<td>(+44) 98888-8888</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 SoundEra - All rights reserved.</p>
+    </footer>
+	<!-- This is the footer page -->
+    <!-- This is the footer section -->
+    
+</body>
+</html>

@@ -1,0 +1,129 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <!-- This is the Google Fonts links -->
+            <link href="./assets/css/style.css" rel="stylesheet">
+            <title>Contact Us</title>
+        </head>
+    <body class="body-contactUs">
+        <div class="top-bar">
+            <div class="top-bar-logo">
+                <label>SoundEra</label>
+            </div>
+            <!-- This is the logo section -->
+            <div class="nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bands.html">Bands</a></li>
+                        <li><a href="contactUs.html">Contact us</a></li>
+                    </ul>			
+                </nav>
+            </div>
+            <!-- These are the navbar and navigation list -->
+            <div class="btn-register">
+                <input type="button" value="Register" id="btn-register">
+                <input type="button" value="Sign in" id="btn-login">
+            </div>
+            <!-- These are the login and register buttons -->
+        </div>
+        <div class="contactUs-main-container">    
+            <div class="aboutUs-box" id="aboutus">
+                <h1>About us</h1>
+                <p>
+                    We're a team of passionate students who created SoundEra to bring our favorite 80s and 90s bands to a whole new generation. Founded in 2025 at the National College of Ireland in Dublin, SoundEra is all about taking you on an epic journey through the greatest rock bands of all time. Ready to dive in and rock out? 
+                </p>
+
+                <p>
+                    Do you have any suggestion to make our SoundEra bigger ? Leave us message using the form in this page. It would be amazing to listen you!
+                </p>
+
+                <h1>SoudEra Team</h1>
+            </div>
+            <!-- This is the about us section -->
+
+            <form class="form-box" id="contactus" method="post">
+                <h2>Contact us</h2>
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" minlength="3" maxlength="20" required>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" required>
+                <label>Gender</label>
+                <span>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <input type="radio" name="gender" value="Other" >Other 
+                </span>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" autocomplete="off" minlength="10" maxlength="10" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <span>
+                    <label>What kind of music do you like the most?</label>
+                    <input type="checkbox" name="musicstyle" ><label>Classic Rock</label>
+                    <input type="checkbox" name="musicstyle" ><label>Hardcore</label>
+                    <input type="checkbox" name="musicstyle" ><label>Metal</label>
+                </span>
+                <label for="decade">What decade do you prefer?</label>
+                <select id="decade" name="decade">
+                    <option value="90s">90s</option>
+                    <option value="80s">80s</option>
+                    <option value="70s">70s</option>
+                </select>
+                <label for="suggestion">Sugestion</label>
+                <textarea name="suggestion" id="suggestion" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+            <!-- This is the contact form -->
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="">Our Story</a></li>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-table-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SoundEra</th>
+                                <th>Marketing Team</th>
+                                <th>Sales Team</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SoundEra Ireland</td>
+                                <td>contactus@soundera.ie</td>
+                                <td>suport@soundera.ie</td>
+                                <td>(+353) 99999-9999</td>
+                            </tr>
+                            <tr>
+                                <td>SoundEra UK</td>
+                                <td>info@soundera.uk</td>
+                                <td>help@soundera.uk</td>
+                                <td>(+44) 98888-8888</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- This is a contact table -->
+                </div>
+            </div>
+            <p class="footer-bottom">&copy; 2025 SoundEra - All rights reserved.</p>
+        </footer>
+        <!-- This is the footer page --> 
+    </body>
+    </html>
